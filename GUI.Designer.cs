@@ -34,22 +34,25 @@
             this.pathTbx = new System.Windows.Forms.TextBox();
             this.browseBtn = new System.Windows.Forms.Button();
             this.outputFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.gameList = new System.Windows.Forms.ListView();
+            this.logoHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // searchTbx
             // 
             this.searchTbx.Location = new System.Drawing.Point(13, 13);
             this.searchTbx.Name = "searchTbx";
-            this.searchTbx.Size = new System.Drawing.Size(433, 20);
+            this.searchTbx.Size = new System.Drawing.Size(254, 20);
             this.searchTbx.TabIndex = 0;
             // 
             // findBtn
             // 
-            this.findBtn.Location = new System.Drawing.Point(452, 11);
+            this.findBtn.Location = new System.Drawing.Point(12, 193);
             this.findBtn.Name = "findBtn";
-            this.findBtn.Size = new System.Drawing.Size(75, 23);
+            this.findBtn.Size = new System.Drawing.Size(515, 23);
             this.findBtn.TabIndex = 1;
-            this.findBtn.Text = "Find";
+            this.findBtn.Text = "Select";
             this.findBtn.UseVisualStyleBackColor = true;
             // 
             // dwnBtn
@@ -82,11 +85,37 @@
             // 
             this.outputFolderDialog.RootFolder = System.Environment.SpecialFolder.MyComputer;
             // 
+            // gameList
+            // 
+            this.gameList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.logoHeader,
+            this.nameHeader});
+            this.gameList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.gameList.HideSelection = false;
+            this.gameList.LabelWrap = false;
+            this.gameList.Location = new System.Drawing.Point(13, 39);
+            this.gameList.Name = "gameList";
+            this.gameList.Size = new System.Drawing.Size(514, 148);
+            this.gameList.TabIndex = 6;
+            this.gameList.UseCompatibleStateImageBehavior = false;
+            this.gameList.View = System.Windows.Forms.View.Details;
+            // 
+            // logoHeader
+            // 
+            this.logoHeader.Text = "Logo";
+            this.logoHeader.Width = 106;
+            // 
+            // nameHeader
+            // 
+            this.nameHeader.Text = "Game Name";
+            this.nameHeader.Width = 404;
+            // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 450);
+            this.Controls.Add(this.gameList);
             this.Controls.Add(this.browseBtn);
             this.Controls.Add(this.pathTbx);
             this.Controls.Add(this.dwnBtn);
@@ -109,6 +138,9 @@
         private System.Windows.Forms.TextBox pathTbx;
         private System.Windows.Forms.Button browseBtn;
         private System.Windows.Forms.FolderBrowserDialog outputFolderDialog;
+        private System.Windows.Forms.ListView gameList;
+        private System.Windows.Forms.ColumnHeader logoHeader;
+        private System.Windows.Forms.ColumnHeader nameHeader;
     }
 }
 
